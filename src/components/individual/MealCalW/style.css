@@ -1,0 +1,41 @@
+#meal-week {
+    display:flex;
+    justify-content:center;
+}
+
+#meal-week-p {
+    font-style: italic;
+}
+
+.meal-cal {
+    /* height:75px; */
+    width:100px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    margin:0.5rem;
+    padding:0.5rem;
+    border:1px solid lightgray;
+    border-radius:5px;
+}
+
+.meal-cal h5 {
+    align-self: center;
+    margin:0.25rem;
+}
+
+.meal-box {
+    min-height:5rem;
+    border-top:1px dashed lightgray;
+}
+
+.meal-box p{
+    font-size:0.75rem;
+    text-align:left;
+}
+.meal-box-inpt {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
