@@ -89,30 +89,65 @@ snacks = [
 mealCalDays = [
     {
         id:1,
-        name:'Sunday'
+        name:'Sunday',
+        mealTitles: [
+            {title:'Breakfast'}, 
+            {title: 'Lunch'}, 
+            {title: 'Dinner'}, 
+            {title: 'Snack'}]
     },
     {
         id:2,
-        name:'Monday'
+        name:'Monday',
+        mealTitles: [
+            {title:'Breakfast'}, 
+            {title: 'Lunch'}, 
+            {title: 'Dinner'}, 
+            {title: 'Snack'}]
     },
     {
         id:3,
-        name:'Tuesday'
+        name:'Tuesday',
+        mealTitles: [
+            {title:'Breakfast'}, 
+            {title: 'Lunch'}, 
+            {title: 'Dinner'}, 
+            {title: 'Snack'}]
     },
     {
         id:4,
-        name:'Wednesday'
+        name:'Wednesday',
+        mealTitles: [
+            {title:'Breakfast'}, 
+            {title: 'Lunch'}, 
+            {title: 'Dinner'}, 
+            {title: 'Snack'}]
     },
     {
         id:5,
-        name:'Thursday'
+        name:'Thursday',
+        mealTitles: [
+            {title:'Breakfast'}, 
+            {title: 'Lunch'}, 
+            {title: 'Dinner'}, 
+            {title: 'Snack'}]
     },
     {
         id:6,
-        name:'Friday'
+        name:'Friday',
+        mealTitles: [
+            {title:'Breakfast'}, 
+            {title: 'Lunch'}, 
+            {title: 'Dinner'}, 
+            {title: 'Snack'}]
     },
     {
         id:1,
-        name:'Saturday'
+        name:'Saturday',
+        mealTitles: [
+            {title:'Breakfast'}, 
+            {title: 'Lunch'}, 
+            {title: 'Dinner'}, 
+            {title: 'Snack'}]
     }
 ]

@@ -5,11 +5,12 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
+import Button from '@mui/material/Button';
 import {breakfasts, lunches, dinners, snacks} from '../../../utils/data.js'
-import React from 'react';
 
-const MealSearchModal = ({open, close}) => {
+const MealSearchModal = ({open, close, day, setSearchInpt, searchInpt}) => {
   const [choices, setChoices] = useState([])
+ 
 
   useEffect(() => {
     const newChoices = [
@@ -30,6 +31,17 @@ const MealSearchModal = ({open, close}) => {
     }))
   }, [])
   
+  const captureInpt = e => {
+    e.preventDefault()
+    console.log('search input',searchInpt)
+    close()
+  }
+
+  const handleChange = (e, value) => {
+    console.log(e.target.id)
+    console.log(value)
+    setSearchInpt(value)
+  }
 
   const style = {
     position: 'absolute',
@@ -58,12 +70,25 @@ const MealSearchModal = ({open, close}) => {
         </Typography>
         <Typography id="modal-modal-description" sx={{ mt: 2 }}>
         <Autocomplete
-        id="free-solo-demo"
+        id={day}
         freeSolo
+        onChange={(event, value) => handleChange(event, value)}
+        // onChange={e=>handleChange(e)}
+       
+        // getOptionLabel={option=>option.item}
+        // name={day}
         options={choices.map((option) => option.item)}
-        renderInput={(params) => <TextField {...params} label="Search Database"
+        renderInput={(params) => <TextField {...params} 
+        label="Search Database"
+     
+        // value={searchInpt}
+    
         />}
       />
+        <Button
+         onClick={captureInpt}
+         variant='outlined'
+        >Search</Button>
         </Typography>
       </Box>
     </Modal>

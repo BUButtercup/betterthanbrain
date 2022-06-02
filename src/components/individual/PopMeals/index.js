@@ -9,9 +9,10 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
+import PopDish from '../PopDish';
 
-const PopMeals = () => {
-    const [expanded, setExpanded] = useState(false);
+const PopMeals = ({handlePanelChange, expanded}) => {
+
     const [breakfastItems, setBreakfastItems] = useState([])
     const [lunchItems, setLunchItems] = useState([])
     const [dinnerItems, setDinnerItems] = useState([])
@@ -24,14 +25,12 @@ const PopMeals = () => {
         setSnackItems(snacks)
     }, [])
 
-    const handleChange = (panel) => (event, isExpanded) => {
-        setExpanded(isExpanded ? panel : false);
-    };
+
 
     return (
-        <Container className='pop-meals' >
+        <Container className='pop-meals' maxWidth='md'>
             <h2>Popular Meal Choices</h2>
-            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+            <Accordion expanded={expanded === 'panel1'} onChange={handlePanelChange('panel1')}>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1bh-content"
@@ -46,15 +45,18 @@ const PopMeals = () => {
                     <Typography>
                         <Grid container spacing={2}>
                             {breakfastItems.length ? breakfastItems.map(item =>
-                            (<Grid item key={item.id}>
-                                <Button variant="contained">{item.item}</Button>
-                            </Grid>)) : <h3>You haven't chosen any breakfast favorites</h3>
+                            (
+                            // <Grid item key={item.id}>
+                            //     <Button variant="contained">{item.item}</Button>
+                            // </Grid>
+                            <PopDish dish={item.item} id={item.id}/>
+                            )) : <h3>You haven't chosen any breakfast favorites</h3>
                             }
                         </Grid>
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+            <Accordion expanded={expanded === 'panel2'} onChange={handlePanelChange('panel2')}>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel2bh-content"
@@ -69,15 +71,18 @@ const PopMeals = () => {
                     <Typography>
                         <Grid container spacing={2}>
                             {lunchItems.length ? lunchItems.map(item =>
-                            (<Grid item key={item.id}>
-                                <Button variant="contained">{item.item}</Button>
-                            </Grid>)) : <h3>You haven't chosen any lunch favorites</h3>
+                            (
+                            // <Grid item key={item.id}>
+                            //     <Button variant="contained">{item.item}</Button>
+                            // </Grid>
+                            <PopDish dish={item.item} id={item.id}/>
+                            )) : <h3>You haven't chosen any lunch favorites</h3>
                             }
                         </Grid>
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+            <Accordion expanded={expanded === 'panel3'} onChange={handlePanelChange('panel3')}>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel3bh-content"
@@ -94,15 +99,18 @@ const PopMeals = () => {
                     <Typography>
                         <Grid container spacing={2}>
                             {dinnerItems.length ? dinnerItems.map(item =>
-                            (<Grid item key={item.id}>
-                                <Button variant="contained">{item.item}</Button>
-                            </Grid>)) : <h3>You haven't chosen any dinner favorites</h3>
+                            (
+                            // <Grid item key={item.id}>
+                            //     <Button variant="contained">{item.item}</Button>
+                            // </Grid>
+                            <PopDish dish={item.item} id={item.id}/>
+                            )) : <h3>You haven't chosen any dinner favorites</h3>
                             }
                         </Grid>
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+            <Accordion expanded={expanded === 'panel4'} onChange={handlePanelChange('panel4')}>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel4bh-content"
@@ -117,9 +125,12 @@ const PopMeals = () => {
                     <Typography>
                         <Grid container spacing={2}>
                             {snackItems.length ? snackItems.map(item =>
-                            (<Grid item key={item.id}>
-                                <Button variant="contained">{item.item}</Button>
-                            </Grid>)) : <h3>You haven't chosen any snack favorites</h3>
+                            (
+                            // <Grid item key={item.id}>
+                            //     <Button variant="contained">{item.item}</Button>
+                            // </Grid>
+                              <PopDish dish={item.item} id={item.id}/>
+                            )) : <h3>You haven't chosen any snack favorites</h3>
                             }
                         </Grid>
                     </Typography>
