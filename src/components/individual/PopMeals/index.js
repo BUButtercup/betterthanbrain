@@ -11,7 +11,7 @@ import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import PopDish from '../PopDish';
 
-const PopMeals = ({handlePanelChange, expanded}) => {
+const PopMeals = ({handlePanelChange, expanded, updateDays, dayMealChoice, setSearchInpt, setExpanded}) => {
 
     const [breakfastItems, setBreakfastItems] = useState([])
     const [lunchItems, setLunchItems] = useState([])
@@ -25,7 +25,13 @@ const PopMeals = ({handlePanelChange, expanded}) => {
         setSnackItems(snacks)
     }, [])
 
-
+    const captureDish = (dish) => {
+        console.log('you chose this', dish)
+        console.log(dayMealChoice)
+        console.log(dayMealChoice.split('-').length===2)
+        setSearchInpt(dish)
+        setExpanded(false)
+    }
 
     return (
         <Container className='pop-meals' maxWidth='md'>
@@ -49,7 +55,12 @@ const PopMeals = ({handlePanelChange, expanded}) => {
                             // <Grid item key={item.id}>
                             //     <Button variant="contained">{item.item}</Button>
                             // </Grid>
-                            <PopDish dish={item.item} id={item.id}/>
+                            <PopDish 
+                            dish={item.item} 
+                            id={item.id}
+                            captureDish={captureDish}
+                            />
+                            
                             )) : <h3>You haven't chosen any breakfast favorites</h3>
                             }
                         </Grid>

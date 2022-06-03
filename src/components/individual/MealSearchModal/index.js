@@ -8,9 +8,15 @@ import Autocomplete from '@mui/material/Autocomplete';
 import Button from '@mui/material/Button';
 import {breakfasts, lunches, dinners, snacks} from '../../../utils/data.js'
 
-const MealSearchModal = ({open, close, day, setSearchInpt, searchInpt}) => {
+const MealSearchModal = ({open, close, day, setSearchInpt, searchInpt, dishes, setDishes, ingredients, setIngredients}) => {
   const [choices, setChoices] = useState([])
  
+    
+  const modIngredients = (ingArr) => {
+    const newIngArr = ingArr.map(ing=>{
+
+    })
+  }
 
   useEffect(() => {
     const newChoices = [
@@ -18,6 +24,7 @@ const MealSearchModal = ({open, close, day, setSearchInpt, searchInpt}) => {
       ...lunches, 
       ...dinners, 
       ...snacks]
+    setDishes(newChoices)
     setChoices(newChoices.sort((a, b)=>{
       const nameA = a.item.toUpperCase();
       const nameB = b.item.toUpperCase();
@@ -30,7 +37,7 @@ const MealSearchModal = ({open, close, day, setSearchInpt, searchInpt}) => {
       return 0
     }))
   }, [])
-  
+
   const captureInpt = e => {
     e.preventDefault()
     console.log('search input',searchInpt)

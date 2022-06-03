@@ -1,89 +1,109 @@
 export const breakfasts = [
     {
         id:1,
-        item: 'Buttermilk Pancakes'
+        item: 'Buttermilk Pancakes',
+        ingredients:'All-Purpose Flour:2 cups;Baking Soda:1.5 t;Baking Powder:1.5 t;Granulated Sugar:3 T;Kosher Salt:1.25 t;Large Eggs:2;Buttermilk (full-fat preferred):2.5 cups;Butter:3 T'
     },
     {
         id:2,
-        item: 'Veggie Scramble'
+        item: 'Veggie Scramble',
+        ingredients:''
     },
     {
         id:3,
-        item: 'Puffy Pancake'
+        item: 'Puffy Pancake',
+        ingredients:''
     },
     {
         id:4,
-        item: 'Waffles'
+        item: 'Waffles',
+        ingredients:''
     },
     {
         id:5,
-        item: 'French Toast'
+        item: 'French Toast',
+        ingredients:''
     }
 ],
 lunches = [
     {
         id:1,
-        item: 'Salad'
+        item: 'Salad',
+        ingredients:''
     },
     {
         id:2,
-        item: 'Grilled Cheese and Soup'
+        item: 'Grilled Cheese and Soup',
+        ingredients:''
     },
     {
         id:3,
-        item: 'Salmon and Broccoli'
+        item: 'Salmon and Broccoli',
+        ingredients:''
     },
     {
         id:4,
-        item: 'Mac and Cheese'
+        item: 'Mac and Cheese',
+        ingredients:''
     },
     {
         id:5,
-        item: 'Leftovers'
+        item: 'Leftovers',
+        ingredients:''
     }
 ],
 dinners = [
     {
         id:1,
-        item: 'Nachoes'
+        item: 'Nachoes',
+        ingredients:''
     },
     {
         id:2,
-        item: 'Tuna and Noodles'
+        item: 'Tuna and Noodles',
+        ingredients:''
     },
     {
         id:3,
-        item: 'Beef Stew'
+        item: 'Beef Stew',
+        ingredients:''
     },
     {
         id:4,
-        item: 'Chili'
+        item: 'Chili',
+        ingredients:''
     },
     {
         id:5,
-        item: 'Roast Chicken'
+        item: 'Roast Chicken',
+        ingredients:''
     }
 ],
 snacks = [
     {
         id:1,
-        item: 'Apple and Almond Butter'
+        item: 'Apple and Almond Butter',
+        ingredients:''
     },
     {
         id:2,
-        item: 'Dried Fruit and Nuts'
+        item: 'Dried Fruit and Nuts',
+        ingredients:''
     },
     {
         id:3,
-        item: 'Veggies & Hummus'
+        item: 'Veggies & Hummus',
+        ingredients:''
     },
     {
         id:4,
-        item: 'Crackers & Cheese'
+        item: 'Crackers & Cheese',
+        ingredients:''
     },
     {
         id:5,
-        item: 'Berries'
+        item: 'Berries',
+        ingredients:''
     }
 ],
 mealCalDays = [
